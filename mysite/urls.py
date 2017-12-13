@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from smarturls import surl
 
+# urlpatterns = [
+#     url(r'^admin/', admin.site.urls),
+# ]
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    surl('admin/', admin.site.urls),
 ]

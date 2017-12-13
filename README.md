@@ -11,3 +11,20 @@ diary / 하루 세 줄, 마음정리법
 #### 해야 할 것
 1. 유저 모델 / 포스트 모델 / 코멘트 모델 / 태그 모델 설계
 2. url 정책 세우기
+#### 새로 안 것
+1. smarturls 사용법
+
+        from smarturls import surl
+
+    urls.py 파일에 임포트한다
+
+        # urlpatterns = [
+        url(r'^admin/', admin.site.urls),
+        ]
+
+        urlpatterns = [
+            surl('admin/', admin.site.urls),
+        ]
+    surl을 사용하고 r과^ 삭제
+
+    만드신 분 홈페이지가 접속이 안 돼서 난감했는데 해결했다
