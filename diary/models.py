@@ -15,5 +15,7 @@ class Post(models.Model):
     def publish(self):
         self.save()
 
-    def __ref__(self):
-        return self.created_date
+    def __str__(self):
+        #strTime = str(self.created_date)
+        #return strTime
+        return self.created_date.strftime("%Y %m %d %I:%M %p")
