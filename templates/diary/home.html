@@ -1,6 +1,8 @@
 {% extends 'diary/base.html' %}
 
 {% block content %}
+<a href="{% url 'post_new' %}">hi</a>
+
 {% for post in posts %}
 <div>
     <h1>{{ post.created_date }}</h1>
@@ -9,4 +11,6 @@
     <p>{{ post.text3|linebreaksbr }}</p>
 </div>
 {% endfor %}
+{%block text%}
+{% endblock %}
 {% endblock %}
